@@ -43,7 +43,6 @@ public class GenericsRunner {
         // duplicate 메소드
         ArrayList<Integer> numbers = new ArrayList<>(List.of(1, 2, 3));
         duplicate(numbers);
-        System.out.println("v = " + v);
         System.out.println("numbers = " + numbers);
 
         // addACoupleOfValues 메소드 - 자료형에 상관없이 list 안에 담아줌 (하한 경계)
