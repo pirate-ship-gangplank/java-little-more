@@ -34,7 +34,7 @@ public class Generic {
 	}
 
 }
-
+```
 package day10;
 
 import java.util.ArrayList;
@@ -57,7 +57,7 @@ public class Generic2 {
 	}
 
 }
-
+```
 ## Generic 클래스  
    - 제네릭 클래스는 형 매개변수(type parameter)를 가지는 클래스입니다. 
    - 형매개변수는 객체가 생성시 전달받으며 속성이나 메소드의 자료형으로 
@@ -71,7 +71,7 @@ public class Generic2 {
 ### Ex Code
 - 아래의 코드 처럼 Object 타입을 사용하면 모든 객체를 받을수 있지만 잦은 형변환이 필요한다는 단점이 있다
 >>> package day10;
-
+```
 class Box{
 	private Object object;
 
@@ -100,8 +100,9 @@ public class NoGeneric {
 	}
 
 }
-
->>>> GenericClassExample.java 
+```
+```
+ GenericClassExample.java 
 
 class SimpleGeneric<T> { 
 private T[] values; 
@@ -134,9 +135,10 @@ gDouble.print();
 } 
 } 
 
-
+```
 - Generic 을 이용하면 객체를 생성시 구체적인 타입으로 변형 되므로 형변환이 필요 없다
- >>>> MultipleTypeParam.java 
+ ```
+  MultipleTypeParam.java 
 
 
 class Price<N, V> { 
@@ -176,7 +178,7 @@ p2.print();
 } 
 } 
 
-
+```
 
 ## Generic 인터페이스  
    - 클래스와 마찬가지로 형 매개변수를 가지는 제네릭 인터페이스를 선언합니다. 
@@ -188,7 +190,8 @@ p2.print();
    } 
 
 ### Ex Code
->>>> GenericInterfaceExample.java 
+``` 
+GenericInterfaceExample.java 
 
 
 interface GenericInterface<T> { 
@@ -216,7 +219,7 @@ System.out.println(gInteger.getValueType());
 System.out.println(gString.getValueType()); 
 } 
 } 
-
+```
 
 
 
@@ -232,7 +235,8 @@ System.out.println(gString.getValueType());
 
 
 ### Ex Code
->>>> GenericMethodExample.java 
+```
+GenericMethodExample.java 
 
 public class GenericMethodExample { 
 public static <T> void printArgInfo(T arg) { 
@@ -248,12 +252,12 @@ printArgInfo(c); // <Character> void printArgInfo(Character)
 printArgInfo(f); // <Float> void printArgInfo(Float) 
 } 
 } 
-
+```
 
 ## 제네릭 클래스와 제네릭 메소드를 모두 가지고 있는 경우 
 
 ### Ex Code
->>>>> NestedGenericMethodExample.java 
+```NestedGenericMethodExample.java 
 
 class GenericClass <T> { 
 public void printMethodArgInfo(T arg) { 
@@ -272,4 +276,4 @@ gc.printGenericMethodArgInfo(10L);
 gc.printGenericMethodArgInfo('A'); 
 //gc.printMethodArgInfo(10L); // error 
 } 
-} 
+} ```
