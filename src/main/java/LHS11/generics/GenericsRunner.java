@@ -6,7 +6,7 @@ import java.util.Vector;
 
 public class GenericsRunner {
 
-    static <X>  X doubleValue(X value){
+     static  <X>  X doubleValue(X value){
         return value;
     }
 

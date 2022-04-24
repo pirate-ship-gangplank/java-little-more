@@ -46,7 +46,7 @@ static <X extends List> void duplicate(X list){
     - 제네릭 클래스에서 매개변수로 ArrayList를 받는다고 할 때, ArrayList가 어떤 타입 변수를 가지고 있든 다 받아들일 수 있음
       ex) Integer 만 받아야 되는데 String을 받는다던가..
 ```
-<? extends T> 와일드 카드의 상한 경계 (T와 그 자손들을 구현한 
+<? extends T> 와일드 카드의 상한 경계 (T(Number class)와 그 자손들을 구현한 
 객체들만 매개변수로 가능)
 static double sumOfNumberList(List<? extends Number> numbers){
         double sum = 0.0;
@@ -57,7 +57,7 @@ static double sumOfNumberList(List<? extends Number> numbers){
     }
 ```
 ```
-<? super T> 와일드 카드의 하한 경계 (T와 그 상위 클래스를 구현한 
+<? super T> 와일드 카드의 하한 경계 (T(Number class)와 그 상위 클래스를 구현한 
 객체들만 매개변수로 가능)	
 static void addACoupleOfValues(List<? super Number> numbers){
         numbers.add(1);
