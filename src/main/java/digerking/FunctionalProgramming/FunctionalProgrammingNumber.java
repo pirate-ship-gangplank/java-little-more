@@ -1,6 +1,8 @@
 package digerking.FunctionalProgramming;
 
 import java.util.List;
+import java.util.Optional;
+import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 
 public class FunctionalProgrammingNumber {
@@ -48,6 +50,26 @@ public class FunctionalProgrammingNumber {
         System.out.println("-----------");
 
         Ex3();
+
+        System.out.println("-----------");
+
+        endMax();
+
+        System.out.println("-----------");
+
+        endMin();
+
+        System.out.println("-----------");
+
+        Ex4();
+
+        System.out.println("-----------");
+
+        Ex5();
+
+        System.out.println("-----------");
+
+        OptionalPractice();
     }
 
     // 2.5 일반적인 리스트의 합을 구하는 방식
@@ -122,4 +144,68 @@ public class FunctionalProgrammingNumber {
                 .map(s -> s.length())
                 .forEach(s -> System.out.println(s));
     }
+
+
+    // 2.10 종단연산 - Max
+    private static void endMax() {
+        //optional 객체로 반환
+        System.out.println(List.of(23, 12, 34, 53)
+                .stream()
+                .max((n1, n2) -> Integer.compare(n1, n2)));
+        
+        //optional 객체에서 꺼내기
+        System.out.println(List.of(23, 12, 34, 53)
+                .stream()
+                .max((n1, n2) -> Integer.compare(n1, n2)).get());
+    }
+
+    // 2.11 종단연산 - Min
+    private static void endMin() {
+        //홀수 중에서 최솟값
+        System.out.println(List.of(23, 12, 34, 53).stream()
+                .filter(element -> element %2 != 0)
+                .min((n1, n2) -> Integer.compare(n1, n2)));
+
+        //홀수 값들을 리스트 형식으로
+        System.out.println(List.of(23, 12, 34, 53).stream()
+                .filter(element -> element %2 != 0)
+                .collect(Collectors.toList()));
+    }
+
+    // 2.11 연습문제 - 짝수를 뽑아서 리스트로 저장
+    private static void Ex4() {
+        System.out.println(List.of(23, 12, 34, 53).stream()
+                .filter(e -> e %2 == 0)
+                .collect(Collectors.toList())
+        );
+    }
+
+    // 2.11 연습문제 - 10개의 정수를 제곱한 값을 원소로 갖는 리스트를 만들기
+    private static void Ex5() {
+        //.boxed() -> Stream 객체로 변환해주는 중간 연산
+        
+        System.out.println(
+                IntStream.range(0, 10)
+                        .map(e -> e * e)
+                        .boxed()
+                        .collect(Collectors.toList())
+        );
+    }
+
+    // 2.12 Optional -> NPE 를 피하고자 사용
+    private static void OptionalPractice() {
+        Optional<Integer> test = List.of(23, 45, 67, 12)
+                .stream()
+                .filter(n -> n%2 == 0)
+                .max((n1, n2) -> Integer.compare(n1, n2));
+
+        if (test.isPresent()) {
+            System.out.println(test.get());
+        }
+        else System.out.println("Empty" + test);
+    }
+
+
+
+
 }
