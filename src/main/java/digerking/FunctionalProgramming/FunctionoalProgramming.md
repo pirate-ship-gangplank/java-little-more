@@ -203,8 +203,29 @@ For-loop이 더 빠른 이유를 설명해놓았는데
 
 # Step 12. Optional
 
+### Optional을 사용하는 이유
+
+NPE(Null Pointer Exception)을 피할 수 있다.
+
+    private static void OptionalPractice() {
+        Optional<Integer> test = List.of(23, 45, 67, 12)
+                .stream()
+                .filter(n -> n%2 == 0)
+                .max((n1, n2) -> Integer.compare(n1, n2));
+
+        if (test.isPresent()) {
+            System.out.println(test.get());
+        }
+        else System.out.println("Empty" + test);
+    }
+
+> Optional 객체에 isPresent, isEmpty 등 다양한 메서드를 사용할 수 있다.
 
 
-  
+---
+
+# Step 16. 코드 간결화하기
+
+
 
 ---
