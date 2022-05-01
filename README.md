@@ -19,7 +19,7 @@ fork 후에 생성된 각자의 코드 저장소에서 `Code` 초록색 버튼�
 
 <img src="./image/clone2.png" width="80%"></img><br/>
 
-[이클립스인 경우 참고해주세요](https://hgko1207.github.io/2020/05/18/eclipse-git-clone/) 
+[이클립스인 경우 참고해주세요](https://hgko1207.github.io/2020/05/18/eclipse-git-clone/)
 
 ## 3. 코드 저장하기
 
