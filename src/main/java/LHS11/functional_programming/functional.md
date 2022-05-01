@@ -92,13 +92,13 @@ numbers.stream()
 > - 중간 연산은 요소를 받고, 요소 스트림을 받아 스트림 안의 숫자를 reduce하거나 다른 종류의 요소로 map 가능
 - 중간 연산의 결과는 또 다른 스트림이고 종단 연산에서는 요소를 처리하고 소모
 - 중간 연산의 예
-    - fillter, map, sort, distinct 등
+  - fillter, map, sort, distinct 등
 
   중간 연산(Sort, Distinct, Filter, Map)
 >
 ```
 numbers=[3,5,7,8,3,7,11]
-numbers.streaminct().sorted().map(e->e*e)
+numbers.stream().distinct().sorted().map(e->e*e)
 	.forEach(e->System.out.println(e));
 => 9 25 49 64 121
 ```
@@ -114,11 +114,9 @@ numbers.streaminct().sorted().map(e->e*e)
                 .get();
 ```
 
- 	
-    
-    
 collect
-> ```
+>
+```
 List.of(23,12,34,53).stream().filter(e->e%2==1)
 	.collect(Collectors.toList())
  ```
@@ -146,10 +144,8 @@ List.of(23,45,57).stream.filter(n -> n%2==0)
                 .forEach(e-> System.out.println(e));
 ```
 #### 여기서 filter가 어떻게 적용이 되는가? => 함수형 인터페이스(Prediacate 인터페이스) 덕분에 가능
-```
 - Stream<T> filter(Predicate<? super T> predicate);
 - boolean test(T t)
-```
 ```
 class EvenNumberPredicate implements Predicate<Integer>{
     @Override
@@ -162,11 +158,9 @@ class EvenNumberPredicate implements Predicate<Integer>{
 - 필터링 후에 메소드에 값을 집어넣음
 - Predicate => 입력값을 보고 참인지 거짓인지 판단하여 그 값을 반환
 #### forEach는 어떻게 적용이 되는가?
-```
 - Consumer<? super T> action
 - void accept(T t)
 - Consumer는 허용 메소드
-```
 ```
 class SystemOutConsumer implements Consumer<Integer>{
     @Override
@@ -178,10 +172,8 @@ class SystemOutConsumer implements Consumer<Integer>{
 - forEach() 안의 정의가 Consumer 인터페이스 안의 accept 메소드가 정의가 된다
 - Consumer => 사용자가 어떤 값을 입력해 주고 그에 대한 소비를 진행(어떤 값도 반환 X)
 #### Map은 어떻게 적용이 되는가?
-```
 - <R> Stream<R> map(Function<? super T, ? extends R> mapper;
 - R apply (T t)
-```
 ```
 class NumberSquareMapper implements Function<Integer,Integer>{
     @Override
@@ -194,7 +186,8 @@ class NumberSquareMapper implements Function<Integer,Integer>{
 - 입력하면 출력값을 도출
 
 메소드 레퍼런스를 통한 함수형 프로그래밍 코드 축약
-> ```
+>
+```
  List.of("Ant", "Bat","Cat","Dog","Elephant").stream()
                 .map(String::length)
                 .forEach(MethodReferencesRunner::print);
