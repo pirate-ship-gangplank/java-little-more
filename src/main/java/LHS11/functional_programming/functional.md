@@ -108,8 +108,6 @@ numbers.streaminct().sorted().map(e->e*e)
 
 최대값 연산
 > - 스트림 안의 max 메소드가 적용되지 않기 때문에 비교자 인터페이스를 구현해야함
-``````
-코드를 입력하세요
 ```
 	Integer max = List.of(23, 45, 67, 34).stream()
                 .max((n1, n2) -> Integer.compare(n1, n2))
