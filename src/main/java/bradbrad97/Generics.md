@@ -142,7 +142,7 @@ numbers.add(1.0);
 
 numbers.add(1l);
 
-}
+}ZZ
 
 Number의 하위 클래스인 Integer, Double, Long 등을 numbers에 더해줄 수 있습니다.
 
