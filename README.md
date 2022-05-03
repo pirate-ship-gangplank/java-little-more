@@ -43,11 +43,11 @@ fork 후에 생성된 각자의 코드 저장소에서 `Code` 초록색 버튼�
 ## 4. PR 보내기
 
 1. 내 저장소에서 `Pull requests`를 누르고, `New pull request` 초록색 버튼을 누릅니다.   
-   <img src="./image/pr1.png" width="80%"></img><br/>
+<img src="./image/pr1.png" width="80%"></img><br/>
 2. **head repository가 본인 저장소**이고, **base repository가 pirate-ship-gangplank**가 맞는지 확인하고, `Create pull request`를 누릅니다.   
-   <img src="./image/pr2.png" width="80%"></img><br/>
+<img src="./image/pr2.png" width="80%"></img><br/>
 3. PR의 title을 입력해주고, 마지막으로 `Create pull request`를 누르면 PR이 보내집니다.   
-   <img src="./image/pr3.png" width="80%"></img><br/><br/>
+<img src="./image/pr3.png" width="80%"></img><br/><br/>
 
 결과
 <br/>
