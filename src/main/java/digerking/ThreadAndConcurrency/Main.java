@@ -1,5 +1,28 @@
 package digerking.ThreadAndConcurrency;
 
+
+class Task extends Thread {
+
+    private int number;
+
+    public Task(int number) {
+        this.number = number;
+    }
+
+    public void run() {
+
+        System.out.println("\n Task" + number +  "Started");
+
+        //Task1
+        for (int i = number * 100; i <= number * 100 + 99; i++) {
+            System.out.println(i + " ");
+        }
+        System.out.println("\n Task" + number +  "Done");
+    }
+}
+
+
+
 class Task1 extends Thread {
     public void run() {
 
