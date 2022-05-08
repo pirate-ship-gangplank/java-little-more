@@ -418,7 +418,7 @@ Callable 인터페이스의 구현체인 CallableTask 를 만들어 문자열을
 
 > setPriority() -> 스레드 우선순위 부여
 
-> setStart() -> 스레드 시작
+> Start() -> 스레드 시작
 
 > join() -> 다른 스레드 대기(스레드 간 소통)
 
@@ -426,7 +426,7 @@ Callable 인터페이스의 구현체인 CallableTask 를 만들어 문자열을
 
 > Executors -> newSingleThreadPool()
 
-> ExecutorService - execute() //반환 타입은 Future
+> ExecutorService - submit() //반환 타입은 Future
 
 > ExecutorService - get()
 
