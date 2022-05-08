@@ -102,7 +102,7 @@ Thread.yield(); // 현재의 스레드가 이용가능한 이 상태를 양보�
 
 ### synchronized 키워드
 
-메서드에 붙는 키워드로, 오직 하나의 thread만이 해당 메서드를 수행할 수 있다.
+오직 하나의 thread만이 해당 메서드를 수행할 수 있다.
 
 ```java
 // synchronized 메서드

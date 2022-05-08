@@ -15,7 +15,6 @@ public class MultiFutureExample {
 
     System.err.println("start");
     List<Future<String>> futures = executorService.invokeAll(tasks);
-    System.err.println("aaa");
 
     for (Future<String> future : futures) {
       System.err.println(future.get());
